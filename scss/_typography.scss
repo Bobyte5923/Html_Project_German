@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+// All CSS rules for font staff.
+
+// Import Google Fonts (Roboto and Bitter).
+// Create your own here: https://fonts.google.com/
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Set Roboto by default with a fallback to sans-serif fonts.
+html {
+  // Shorthand syntax may vary. Here it is: font-size/line-height font-family
+  font: #{$font-size}/#{$line-height} 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+// Set Bitter by default for all headings.
+h1, h2, h3, h4, h5, h6, h7 {
+  font-family: 'Bitter', Georgia, 'Times New Roman', Times, serif;
+  margin: 1em 0 .5em 0;
+}
+
+// Perhaps we don't need the top margin on the <h1>, as it is unique.
+h1 {
+  margin-top: 0;
+}
+
+// Set a vertical margin on blocks of content.
+blockquote, dl, ol, ul, li, p, pre, table, figure {
+  margin: .5em 0;
+}

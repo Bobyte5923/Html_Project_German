@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+html {
+  color: var(--color-text, $color-text);
+  /* The second parameter is the fallback value if the var doesn't exist. */
+  background-color: var(--color-html-bg, $color-html-bg);
+}
+
+body {
+  max-width: 1200px;
+  margin: 2em auto; // Center in the page with left and right margins set to auto.
+  background-color: var(--color-body-bg, $color-body-bg);
+  padding: 2em;
+  box-shadow: var(--body-box-shadow);
+}

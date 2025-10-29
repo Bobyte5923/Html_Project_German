@@ -1,0 +1,8 @@
+# Rajoutez ici tous les dossiers ou fichiers à ne pas mettre sur Git.
+
+# Si vous avez des librairies Node.js.
+node_modules/
+
+# On ne veut pas mettre sur Git les fichiers issus d'une compilation.
+css/*.css
+css/*.map

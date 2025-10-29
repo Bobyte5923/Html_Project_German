@@ -1,0 +1,44 @@
+// Your SASS variables, which can be used directly in your SCSS code or via
+// CSS custom properties (CSS variables).
+
+@use 'sass:color'; // For color.adjust()
+
+// Font size and line height.
+$font-size: 16pt;
+$line-height: 1.4;
+
+// Colors:
+$color-text: #222; // Almost black.
+$color-strong: black;
+$color-headings: black;
+$color-html-bg: silver;
+$color-body-bg: white;
+$color-link: blue;
+$color-link-visited: $color-link;
+$color-link-hover: color.adjust($color-link, $lightness: 15%);
+$color-link-active: color.adjust($color-link, $hue: 45deg);
+
+$body-box-shadow: 0 0 .5em rgba(0, 0, 0, 0.2);
+
+// This can be useful for direct CSS changes inside the browser's inspector.
+// Example of use:
+//
+// html {
+//   color: var(--color-text);
+//   /* The second parameter is the fallback value if the var doesn't exist. */
+//   background-color: var(--color-html-bg, white);
+// }
+//
+// h1, h2, h3, h4, h5, h6, h7 {
+//   /* You can override a CSS variable instead of the default inheritance. */
+//   --color-text: darkred;
+// }
+:root {
+  --color-text: #{$color-text};
+  --color-html-bg: #{$color-html-bg};
+  --color-body-bg: #{$color-body-bg};
+  --color-link: #{$color-link};
+  --color-link-hover: #{$color-link-hover};
+
+  --body-box-shadow: #{$body-box-shadow};
+}
