@@ -1,0 +1,109 @@
+// _reset.scss
+// Reset CSS et styles de base
+
+// Reset box-sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Reset HTML et body
+html {
+  font-size: $font-size-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-base;
+  color: $color-text-dark;
+  background-color: $color-bg-white;
+}
+
+// Reset des titres
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+// Reset des paragraphes
+p {
+  margin: 0 0 $spacing-md 0;
+}
+
+// Reset des listes
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Reset des liens
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+// Reset des images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Reset des boutons
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid $color-accent;
+    outline-offset: 2px;
+  }
+}
+
+// Reset des inputs
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  border: $border-width-thin solid $color-border-medium;
+  padding: $spacing-sm;
+  border-radius: $border-radius-sm;
+
+  &:focus {
+    outline: 2px solid $color-secondary;
+    outline-offset: 2px;
+    border-color: $color-secondary;
+  }
+}
+
+// Suppression de l'outline par défaut (mais gardé pour :focus-visible)
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid $color-accent;
+  outline-offset: 2px;
+}
