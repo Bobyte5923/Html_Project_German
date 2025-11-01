@@ -1,5 +1,6 @@
 // _header.scss
 // Styles pour le header
+@use 'variables' as *;
 
 .header {
   background-color: $color-bg-white;
@@ -25,7 +26,7 @@
 .header__logo {
   display: flex;
   flex-direction: column;
-  gap: $spacing-xs / 2;
+  gap: calc($spacing-xs / 2);
 }
 
 .header__title {

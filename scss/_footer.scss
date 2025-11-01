@@ -1,6 +1,6 @@
 // _footer.scss
 // Styles pour le footer
-
+@use 'variables' as *;
 .footer {
   background-color: $color-primary;
   color: $color-text-white;

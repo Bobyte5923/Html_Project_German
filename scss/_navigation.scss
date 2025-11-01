@@ -1,6 +1,6 @@
 // _navigation.scss
 // Styles pour la navigation
-
+@use 'variables' as *;
 .nav {
   display: flex;
   align-items: center;

@@ -1,5 +1,7 @@
 // _typography.scss
 // Styles typographiques
+@use 'sass:color';
+@use 'variables' as *;
 
 // Titres
 h1, .h1 {
@@ -93,7 +95,7 @@ a {
   transition: all $transition-base;
 
   &:hover {
-    color: darken($color-secondary, 10%);
+    color: color.adjust($color-secondary, $lightness: -10%);
     text-decoration: underline;
   }
 

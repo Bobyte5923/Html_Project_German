@@ -1,5 +1,7 @@
 // _layout.scss
 // Layouts, containers, sections et composants de page
+@use 'sass:color';
+@use 'variables' as *;
 
 // ===== CONTAINER =====
 .container {
@@ -153,7 +155,7 @@
 // ===== CTA SECTION =====
 .cta {
   padding: $spacing-xxl 0;
-  background: linear-gradient(135deg, $color-primary 0%, lighten($color-primary, 10%) 100%);
+  background: linear-gradient(135deg, $color-primary 0%, color.adjust($color-primary, $lightness: 10%) 100%);
   color: $color-text-white;
   text-align: center;
 
@@ -208,8 +210,8 @@
   border-color: $color-secondary;
 
   &:hover {
-    background-color: darken($color-secondary, 8%);
-    border-color: darken($color-secondary, 8%);
+    background-color: color.adjust($color-secondary, $lightness: -8%);
+    border-color: color.adjust($color-secondary, $lightness: -8%);
     transform: translateY(-2px);
     box-shadow: $shadow-accent;
   }

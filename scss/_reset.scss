@@ -1,6 +1,6 @@
 // _reset.scss
 // Reset CSS et styles de base
-
+@use 'variables' as *;
 // Reset box-sizing
 *,
 *::before,
@@ -53,7 +53,7 @@ a {
   color: inherit;
   text-decoration: none;
   transition: color $transition-base;
-
+  
   &:hover {
     color: $color-secondary;
   }
@@ -74,7 +74,7 @@ button {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
-
+  
   &:focus {
     outline: 2px solid $color-accent;
     outline-offset: 2px;
@@ -90,7 +90,7 @@ select {
   border: $border-width-thin solid $color-border-medium;
   padding: $spacing-sm;
   border-radius: $border-radius-sm;
-
+  
   &:focus {
     outline: 2px solid $color-secondary;
     outline-offset: 2px;
@@ -98,7 +98,7 @@ select {
   }
 }
 
-// Suppression de l'outline par défaut (mais gardé pour :focus-visible)
+// Suppression de l'outline par defaut (mais garde pour focus-visible)
 :focus {
   outline: none;
 }
