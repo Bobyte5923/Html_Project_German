@@ -1,44 +1,173 @@
-// Your SASS variables, which can be used directly in your SCSS code or via
-// CSS custom properties (CSS variables).
+// _variables.scss
+// Variables globales du projet - Thème allemand moderne
+@use 'sass:math';
 
-@use 'sass:color'; // For color.adjust()
+// ===== COULEURS PRINCIPALES =====
+// Palette inspirée du drapeau allemand
+$color-primary: #1A1A1A;        // Noir élégant (drapeau)
+$color-secondary: #C41E3A;      // Rouge (drapeau)
+$color-accent: #FFCF00;         // Or/Jaune (drapeau)
 
-// Font size and line height.
-$font-size: 16pt;
-$line-height: 1.4;
+// Couleurs de texte
+$color-text-dark: #2C2C2C;      // Texte principal
+$color-text-medium: #666666;    // Texte secondaire
+$color-text-light: #8E8E93;     // Texte tertiaire
+$color-text-white: #FFFFFF;     // Texte sur fond sombre
 
-// Colors:
-$color-text: #222; // Almost black.
-$color-strong: black;
-$color-headings: black;
-$color-html-bg: silver;
-$color-body-bg: white;
-$color-link: blue;
-$color-link-visited: $color-link;
-$color-link-hover: color.adjust($color-link, $lightness: 15%);
-$color-link-active: color.adjust($color-link, $hue: 45deg);
+// Couleurs de fond
+$color-bg-white: #FFFFFF;       // Fond principal
+$color-bg-light: #F5F5F5;       // Fond alternatif
+$color-bg-dark: #1A1A1A;        // Fond sombre
+$color-bg-beige: #F7F3E9;       // Fond chaleureux
 
-$body-box-shadow: 0 0 .5em rgba(0, 0, 0, 0.2);
+// Couleurs d'état
+$color-success: #28A745;        // Succès
+$color-info: #2C3E50;           // Information
+$color-warning: #FFC107;        // Attention
+$color-error: #DC3545;          // Erreur
 
-// This can be useful for direct CSS changes inside the browser's inspector.
-// Example of use:
-//
-// html {
-//   color: var(--color-text);
-//   /* The second parameter is the fallback value if the var doesn't exist. */
-//   background-color: var(--color-html-bg, white);
-// }
-//
-// h1, h2, h3, h4, h5, h6, h7 {
-//   /* You can override a CSS variable instead of the default inheritance. */
-//   --color-text: darkred;
-// }
-:root {
-  --color-text: #{$color-text};
-  --color-html-bg: #{$color-html-bg};
-  --color-body-bg: #{$color-body-bg};
-  --color-link: #{$color-link};
-  --color-link-hover: #{$color-link-hover};
+// Couleurs de bordure
+$color-border-light: #E0E0E0;
+$color-border-medium: #CCCCCC;
+$color-border-dark: #999999;
 
-  --body-box-shadow: #{$body-box-shadow};
+// ===== TYPOGRAPHIE =====
+// Familles de polices
+$font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+               'Helvetica Neue', Arial, sans-serif;
+$font-secondary: Georgia, 'Times New Roman', serif;
+
+// Tailles de police (système modulaire)
+$font-size-base: 16px;
+$font-size-small: 0.875rem;     // 14px
+$font-size-medium: 1rem;        // 16px
+$font-size-large: 1.125rem;     // 18px
+$font-size-xl: 1.25rem;         // 20px
+
+// Tailles des titres
+$font-size-h1: 2.5rem;          // 40px
+$font-size-h2: 2rem;            // 32px
+$font-size-h3: 1.5rem;          // 24px
+$font-size-h4: 1.25rem;         // 20px
+$font-size-h5: 1.125rem;        // 18px
+$font-size-h6: 1rem;            // 16px
+
+// Poids des polices
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Hauteur de ligne
+$line-height-tight: 1.2;
+$line-height-base: 1.6;
+$line-height-relaxed: 1.8;
+
+// ===== ESPACEMENTS =====
+// Système d'espacement cohérent (8px base)
+$spacing-xs: 0.5rem;            // 8px
+$spacing-sm: 1rem;              // 16px
+$spacing-md: 1.5rem;            // 24px
+$spacing-lg: 2rem;              // 32px
+$spacing-xl: 3rem;              // 48px
+$spacing-xxl: 4rem;             // 64px
+$spacing-xxxl: 6rem;            // 96px
+
+// ===== BREAKPOINTS RESPONSIVE =====
+$breakpoint-mobile: 576px;      // Petit mobile
+$breakpoint-tablet: 768px;      // Tablette
+$breakpoint-desktop: 992px;     // Desktop
+$breakpoint-large: 1200px;      // Large desktop
+
+// ===== CONTENEURS =====
+$container-max-width: 1200px;
+$container-padding: $spacing-md;
+$container-padding-mobile: $spacing-sm;
+
+// ===== TRANSITIONS =====
+$transition-fast: 0.15s ease-in-out;
+$transition-base: 0.3s ease-in-out;
+$transition-slow: 0.5s ease-in-out;
+
+// ===== BORDURES =====
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-full: 9999px;
+
+$border-width-thin: 1px;
+$border-width-medium: 2px;
+$border-width-thick: 4px;
+
+// ===== OMBRES =====
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+$shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.15);
+
+// Ombres avec couleur accent
+$shadow-accent: 0 4px 12px rgba(196, 30, 58, 0.2);
+$shadow-accent-lg: 0 8px 24px rgba(196, 30, 58, 0.25);
+
+// ===== Z-INDEX =====
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-tooltip: 1060;
+
+// ===== MIXINS UTILES =====
+// Mixin pour centrer flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin pour media queries
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+// Mixin pour truncate text
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Mixin pour aspect ratio
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: math.div($height, $width) * 100%;
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

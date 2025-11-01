@@ -1,0 +1,48 @@
+// _header.scss
+// Styles pour le header
+@use 'variables' as *;
+
+.header {
+  background-color: $color-bg-white;
+  border-bottom: $border-width-thin solid $color-border-light;
+  padding: $spacing-md 0;
+  position: sticky;
+  top: 0;
+  z-index: $z-index-sticky;
+  box-shadow: $shadow-sm;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  gap: calc($spacing-xs / 2);
+}
+
+.header__title {
+  font-size: $font-size-h3;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  margin: 0;
+
+  @include mobile {
+    font-size: $font-size-h4;
+  }
+}
+
+.header__subtitle {
+  font-size: $font-size-small;
+  color: $color-text-medium;
+  margin: 0;
+  font-weight: $font-weight-regular;
+}

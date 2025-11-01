@@ -1,10 +1,18 @@
 /* CSS for all medias, including print. */
+@use 'variables' as *;
+// 1. Configuration et variables
+@use 'variables'; 
 
-@use 'variables';
+// 2. Reset et base
 @use 'reset';
 @use 'typography';
+
+// 3. Layout et composants
 @use 'layout';
 @use 'header';
 @use 'navigation';
 @use 'footer';
+@use 'additional_components';
+
+// 4. Styles d'impression
 @use 'print';

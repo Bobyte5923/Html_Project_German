@@ -1,0 +1,238 @@
+// Additional components pour page à propos
+@use 'variables' as *;
+// ===== TIMELINE =====
+.timeline {
+  position: relative;
+  padding-left: $spacing-xl;
+
+  @include mobile {
+    padding-left: $spacing-lg;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: $spacing-md;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: $color-secondary;
+
+    @include mobile {
+      left: $spacing-sm;
+    }
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: $spacing-xl;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline-item__marker {
+  position: absolute;
+  left: -$spacing-xl;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: $color-secondary;
+  border-radius: $border-radius-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+
+  @include mobile {
+    left: -$spacing-lg;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}
+
+.timeline-item__content {
+  background-color: $color-bg-white;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+}
+
+.timeline-item__title {
+  font-size: $font-size-h4;
+  margin-bottom: $spacing-xs;
+  color: $color-primary;
+}
+
+.timeline-item__period {
+  font-size: $font-size-small;
+  color: $color-secondary;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-sm;
+}
+
+.timeline-item__description {
+  color: $color-text-medium;
+  line-height: $line-height-base;
+}
+
+// ===== EXPERIENCE =====
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+}
+
+.experience-item {
+  background-color: $color-bg-white;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+}
+
+.experience-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: $spacing-md;
+
+  @include mobile {
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+}
+
+.experience-item__title {
+  font-size: $font-size-h4;
+  color: $color-primary;
+}
+
+.experience-item__period {
+  font-size: $font-size-small;
+  color: $color-secondary;
+  font-weight: $font-weight-medium;
+}
+
+.experience-item__description {
+  color: $color-text-medium;
+  line-height: $line-height-base;
+  margin-bottom: $spacing-md;
+}
+
+.experience-item__achievements {
+  list-style: none;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding-left: $spacing-md;
+    margin-bottom: $spacing-xs;
+    color: $color-text-dark;
+
+    &::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: $color-secondary;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+// ===== SPECIALTIES =====
+.specialties {
+  padding: $spacing-lg 0;
+}
+
+.specialties__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing-lg;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.specialty-card {
+  text-align: center;
+  padding: $spacing-lg;
+  background-color: $color-bg-white;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.specialty-card__icon {
+  font-size: 3rem;
+  margin-bottom: $spacing-md;
+}
+
+.specialty-card__title {
+  font-size: $font-size-h4;
+  margin-bottom: $spacing-sm;
+  color: $color-primary;
+}
+
+.specialty-card__description {
+  color: $color-text-medium;
+  line-height: $line-height-base;
+}
+
+// ===== TESTIMONIALS =====
+.testimonials {
+  padding: $spacing-xxl 0;
+  background-color: $color-bg-light;
+
+  @include mobile {
+    padding: $spacing-xl 0;
+  }
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-lg;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonial {
+  background-color: $color-bg-white;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+  border-left: 4px solid $color-accent;
+}
+
+.testimonial__text {
+  font-size: $font-size-medium;
+  line-height: $line-height-relaxed;
+  color: $color-text-dark;
+  margin-bottom: $spacing-md;
+  font-style: italic;
+
+  &::before {
+    content: '"';
+    font-size: 2rem;
+    color: $color-accent;
+    line-height: 0;
+  }
+}
+
+.testimonial__author {
+  font-size: $font-size-small;
+  color: $color-text-medium;
+  font-weight: $font-weight-medium;
+  font-style: normal;
+}

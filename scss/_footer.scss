@@ -1,0 +1,74 @@
+// _footer.scss
+// Styles pour le footer
+@use 'variables' as *;
+.footer {
+  background-color: $color-primary;
+  color: $color-text-white;
+  padding: $spacing-xl 0 $spacing-md;
+  margin-top: auto;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-lg;
+  margin-bottom: $spacing-lg;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+    text-align: center;
+  }
+}
+
+.footer__info,
+.footer__contact,
+.footer__hours {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.footer__title {
+  font-size: $font-size-h4;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+  margin-bottom: $spacing-sm;
+}
+
+.footer__heading {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-semibold;
+  color: $color-accent;
+  margin-bottom: $spacing-xs;
+}
+
+.footer__text {
+  font-size: $font-size-medium;
+  color: rgba($color-text-white, 0.8);
+  line-height: $line-height-base;
+  margin: 0;
+}
+
+.footer__link {
+  color: rgba($color-text-white, 0.9);
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-accent;
+    text-decoration: underline;
+  }
+}
+
+.footer__bottom {
+  padding-top: $spacing-md;
+  border-top: $border-width-thin solid rgba($color-text-white, 0.2);
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: $font-size-small;
+  color: rgba($color-text-white, 0.7);
+  margin: 0;
+}
