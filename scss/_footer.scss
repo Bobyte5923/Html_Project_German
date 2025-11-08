@@ -72,3 +72,32 @@
   color: rgba($color-text-white, 0.7);
   margin: 0;
 }
+
+.footer__social{
+  display: flex;
+  gap: 1rem;
+
+  @include mobile{
+    justify-content: center;
+  }
+}
+
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transition: transform $transition-base;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+.footer__social-icon{
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
