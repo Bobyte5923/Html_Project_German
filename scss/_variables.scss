@@ -5,7 +5,7 @@
 // ===== COULEURS PRINCIPALES =====
 // Palette inspirée du drapeau allemand
 $color-primary: #1A1A1A;        // Noir élégant (drapeau)
-$color-secondary: #C41E3A;      // Rouge (drapeau)
+$color-secondary: #73c39e;      // Rouge (drapeau)
 $color-accent: #FFCF00;         // Or/Jaune (drapeau)
 
 // Couleurs de texte
@@ -15,8 +15,8 @@ $color-text-light: #8E8E93;     // Texte tertiaire
 $color-text-white: #FFFFFF;     // Texte sur fond sombre
 
 // Couleurs de fond
-$color-bg-white: #FFFFFF;       // Fond principal
-$color-bg-light: #F5F5F5;       // Fond alternatif
+$color-bg-white: hsl(0, 0%, 100%);       // Fond principal
+$color-bg-light: #fff1e0;       // Fond alternatif
 $color-bg-dark: #1A1A1A;        // Fond sombre
 $color-bg-beige: #F7F3E9;       // Fond chaleureux
 
