@@ -14,7 +14,7 @@
 
 .header__content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   @include mobile {
@@ -23,11 +23,33 @@
   }
 }
 
-.header__logo {
-  display: flex;
+.header__title{
   flex-direction: column;
   gap: calc($spacing-xs / 2);
+
+  @include mobile {
+  text-align: center;
+  }
+
 }
+
+.header__logo {
+  display: flex;
+  //flex-direction: column;
+  //gap: calc($spacing-xs / 2);
+  gap : 1rem;
+
+    @include mobile {
+    justify-content: center;
+  }
+
+}
+
+.header__logo-flag{
+  width: 60px;
+  height: auto;
+}
+
 
 .header__title {
   font-size: $font-size-h3;
