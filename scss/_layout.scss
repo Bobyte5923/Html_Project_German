@@ -60,10 +60,23 @@
 
 .hero__image {
   img {
-    width: 100%;
-    height: auto;
-    border-radius: $border-radius-lg;
-    box-shadow: $shadow-lg;
+  width: 100%;
+  height: auto;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-lg;
+  animation-duration: 3s;
+  animation-name: slidein2;
+
+  @keyframes slidein2 {
+    from{
+      margin-left: -100%;
+      width: 100%;
+    }
+    to{
+      margin-left: 0%;
+      width: 100%;
+    }
+    }
   }
 
   @include mobile {
@@ -73,6 +86,20 @@
 
 .hero__text {
   padding: $spacing-md;
+  animation-duration: 3s;
+  animation-name: slidein;
+
+  @keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+     }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
 }
 
 .hero__title {
@@ -90,6 +117,7 @@
   line-height: $line-height-relaxed;
   color: $color-text-medium;
   margin-bottom: $spacing-lg;
+
 }
 
 .hero__buttons {
@@ -108,6 +136,21 @@
   @include mobile {
     padding: $spacing-xl 0;
   }
+
+  animation-duration: 3s;
+  animation-name: slidein10;
+
+  @keyframes slidein10{
+    from{
+      margin-top: 100%;
+    }
+    to{
+      margin-top: 0%;
+    }
+  }
+
+
+
 }
 
 .features__grid {
@@ -244,7 +287,20 @@
   padding: $spacing-xl 0;
   background-color: $color-bg-light;
   text-align: center;
+  animation-duration: 3s;
+  animation-name : slidein6;
 
+  @keyframes slidein6 {
+    from{
+      margin-left: 100%;
+      width: 100%;
+    }
+    to{
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
   @include mobile {
     padding: $spacing-lg 0;
   }
@@ -269,10 +325,26 @@
 // ===== PRICING SECTION =====
 .pricing {
   padding: $spacing-xxl 0;
-
+  
   @include mobile {
     padding: $spacing-xl 0;
   }
+  
+  animation-duration: 6s;
+  animation-name: slidein7;
+
+  @keyframes slidein7 {
+    from{
+      margin-top: 100%;
+      width: 100%;
+    }
+    to{
+      margin-top: 0%;
+      width:100%
+    }
+  }
+
+
 }
 
 .pricing__grid {
@@ -456,6 +528,37 @@
     width: 100%;
     border-radius: $border-radius-lg;
     box-shadow: $shadow-lg;
+    animation-duration: 3s;
+    animation-name: slidein3;
+
+    @keyframes slidein3 {
+      from{
+        margin-left: -100%;
+        width: 100%;
+      }
+      to{
+        margin-left: 0%;
+        width: 100%;
+      }
+      
+    }
+  }
+}
+
+.about-hero__text{
+  animation-duration: 3s;
+  animation-name: slidein4;
+
+  @keyframes slidein4 {
+    from{
+      margin-left: 100%;
+      width: 100%;
+    }
+    to{
+      margin-left: 0%;
+      width: 100%;
+    }
+    
   }
 }
 
@@ -479,6 +582,17 @@
 
 .about-section {
   padding: $spacing-xxl 0;
+  animation-duration: 3s;
+  animation-name: slidin;
+
+  @keyframes slidin {
+    from{
+      margin-top: 100%;
+    }
+    to{
+      margin-top: 0%;
+    }
+  }
 
   &--alt {
     background-color: $color-bg-light;
