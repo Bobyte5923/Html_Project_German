@@ -14,7 +14,7 @@
 
 .header__content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   @include mobile {
@@ -23,6 +23,20 @@
   }
 }
 
+.header__content-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  gap : 2rem;
+
+  @include mobile {
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+}
+
+
+
 .header__title{
   flex-direction: column;
   gap: calc($spacing-xs / 2);
@@ -30,14 +44,10 @@
   @include mobile {
   text-align: center;
   }
-
 }
 
 .header__logo {
   display: flex;
-  //flex-direction: column;
-  //gap: calc($spacing-xs / 2);
-  gap : 1rem;
 
     @include mobile {
     justify-content: center;
@@ -46,12 +56,13 @@
 }
 
 .header__logo-flag{
-  width: 60px;
-  height: auto;
+  width: auto;
+  height: 60px;
+  margin: 1px;
 }
 
 
-.header__title {
+.header__title-text {
   font-size: $font-size-h3;
   font-weight: $font-weight-bold;
   color: $color-primary;
