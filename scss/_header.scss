@@ -23,13 +23,46 @@
   }
 }
 
-.header__logo {
+.header__content-title{
   display: flex;
-  flex-direction: column;
-  gap: calc($spacing-xs / 2);
+  justify-content: space-between;
+  align-items: right;
+  gap : 2rem;
+
+  @include mobile {
+    flex-direction: column;
+    gap: $spacing-md;
+  }
 }
 
-.header__title {
+
+
+.header__title{
+  flex-direction: column;
+  gap: calc($spacing-xs / 2);
+
+  @include mobile {
+  text-align: center;
+  }
+}
+
+.header__logo {
+  display: flex;
+
+    @include mobile {
+    justify-content: center;
+  }
+
+}
+
+.header__logo-flag{
+  width: auto;
+  height: 60px;
+  margin: 1px;
+}
+
+
+.header__title-text {
   font-size: $font-size-h3;
   font-weight: $font-weight-bold;
   color: $color-primary;
