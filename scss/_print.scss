@@ -1,2 +1,45 @@
 // CSS rules for printing.
 @use 'variables' as *;
+
+@media print {
+
+    @page {
+        margin: 1cm 1cm 1cm 1.5cm;
+    }
+
+    html {
+        background: none !important;
+    }
+
+
+
+    img {
+    max-width: 10cm;
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    nav,
+    .footer__info,
+    .btn {
+        display: none !important;
+        visibility: hidden;
+    }
+
+    .pricing-card,
+    .timeline-item,
+    .experience-item,
+    .specialty-card,
+    .about-section,
+    .testimonials{
+        page-break-inside: avoid;
+    }
+
+    .header {
+        position: static;
+        page-break-after: auto;
+  }
+
+}

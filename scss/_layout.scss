@@ -65,9 +65,9 @@
   border-radius: $border-radius-lg;
   box-shadow: $shadow-lg;
   animation-duration: 1s;
-  animation-name: slidein2;
+  animation-name: slidein-1;
 
-  @keyframes slidein2 {
+  @keyframes slidein-1 {
     from{
       margin-left: -100%;
       width: 100%;
@@ -87,9 +87,9 @@
 .hero__text {
   padding: $spacing-md;
   animation-duration: 1s;
-  animation-name: slidein;
+  animation-name: slidein-2;
 
-  @keyframes slidein {
+  @keyframes slidein-2 {
     from {
         margin-left: 100%;
         width: 100%;
@@ -138,9 +138,9 @@
   }
 
   animation-duration: 1s;
-  animation-name: slidein10;
+  animation-name: slidein-3;
 
-  @keyframes slidein10{
+  @keyframes slidein-3{
     from{
       margin-top: 100%;
     }
@@ -287,10 +287,10 @@
   padding: $spacing-xl 0;
   background-color: $color-bg-light;
   text-align: center;
-  animation-duration: 3s;
-  animation-name : slidein6;
+  animation-duration: 1s;
+  animation-name : slidein-4;
 
-  @keyframes slidein6 {
+  @keyframes slidein-4 {
     from{
       margin-left: 100%;
       width: 100%;
@@ -331,9 +331,9 @@
   }
   
   animation-duration: 2s;
-  animation-name: slidein7;
+  animation-name: slidein-5;
 
-  @keyframes slidein7 {
+  @keyframes slidein-5 {
     from{
       margin-top: 100%;
       width: 100%;
@@ -529,9 +529,9 @@
     border-radius: $border-radius-lg;
     box-shadow: $shadow-lg;
     animation-duration: 1s;
-    animation-name: slidein3;
+    animation-name: slidein-6;
 
-    @keyframes slidein3 {
+    @keyframes slidein-6 {
       from{
         margin-left: -100%;
         width: 100%;
@@ -547,9 +547,9 @@
 
 .about-hero__text{
   animation-duration: 1s;
-  animation-name: slidein4;
+  animation-name: slidein-7;
 
-  @keyframes slidein4 {
+  @keyframes slidein-7 {
     from{
       margin-left: 100%;
       width: 100%;
