@@ -6,3 +6,5 @@ node_modules/
 # On ne veut pas mettre sur Git les fichiers issus d'une compilation.
 css/*.css
 css/*.map
+
+.idea
